@@ -1,0 +1,28 @@
+on:
+   push: 
+      branches: [main]
+name: 🚀 Deploy invento app to user server infinityfree
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v6
+
+    - name: Use Node.js 25
+      uses: actions/setup-node@v6
+      with:
+        node-version: '25'
+      
+    - name: 🔨 Build Project
+      run: |
+        npm install
+        npm run build
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+      with:
+        server: ftpupload.net
+        username: myFtpUserName
+        password: ${{ secrets.password }}
