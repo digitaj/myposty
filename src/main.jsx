@@ -14,12 +14,12 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
      <AppNameProvider>
       <ProductProvider>
-    {/* <App /> */}
-    {/* <Bank /> */}
-    {/* <Inventory /> */}
-     {/* <Meal /> */}
-    </ProductProvider>
-    <Blogger />
+        {/* <App /> */}
+        {/* <Bank /> */}
+        <Inventory /> 
+        {/* {/* <Meal /> */}
+       </ProductProvider>
+    {/* <Blogger /> */}
     
   </AppNameProvider>
   </StrictMode>,
