@@ -10,10 +10,10 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v6
 
-    - name: Use Node.js 25
+    - name: Use Node.js 22
       uses: actions/setup-node@v6
       with:
-        node-version: '25'
+        node-version: '22'
       
     - name: 🔨 Build Project
       run: |
